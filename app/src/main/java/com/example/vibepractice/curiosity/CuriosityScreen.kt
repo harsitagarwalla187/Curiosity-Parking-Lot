@@ -155,8 +155,16 @@ fun QuickCaptureCard(
                 OutlinedTextField(
                     value = uiState.quickCaptureTitle,
                     onValueChange = onTitleChange,
-                    placeholder = { Text("What concept or term did you encounter?") },
-                    singleLine = !uiState.isExpandedInput,
+                    placeholder = {
+                        Text(
+                            text = "Capture a concept or term...",
+                            maxLines = 1,
+                            softWrap = false,
+                            overflow = TextOverflow.Ellipsis
+                        )
+                    },
+                    singleLine = true,
+                    maxLines = 1,
                     keyboardOptions = KeyboardOptions(imeAction = ImeAction.Done),
                     keyboardActions = KeyboardActions(onDone = { onCapture() }),
                     modifier = Modifier.weight(1f),
