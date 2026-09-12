@@ -1,8 +1,5 @@
-package com.example.vibepractice.data.repository
+package com.example.vibepractice.curiosity
 
-import com.example.vibepractice.data.local.CuriosityDao
-import com.example.vibepractice.data.model.CuriosityItem
-import com.example.vibepractice.data.model.CuriosityStatus
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow

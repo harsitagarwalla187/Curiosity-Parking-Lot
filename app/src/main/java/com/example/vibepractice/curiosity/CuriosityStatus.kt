@@ -1,4 +1,4 @@
-package com.example.vibepractice.data.model
+package com.example.vibepractice.curiosity
 
 enum class CuriosityStatus {
     PARKED,      // Newly captured items awaiting review

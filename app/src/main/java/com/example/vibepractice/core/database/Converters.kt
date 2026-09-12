@@ -1,7 +1,7 @@
-package com.example.vibepractice.data.local
+package com.example.vibepractice.core.database
 
 import androidx.room.TypeConverter
-import com.example.vibepractice.data.model.CuriosityStatus
+import com.example.vibepractice.curiosity.CuriosityStatus
 
 class Converters {
     @TypeConverter

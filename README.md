@@ -34,7 +34,7 @@ When reading technical books, documentation, or research papers, encountering un
 
 ## 🏗️ Architecture & Tech Stack
 
-This project follows **Clean Architecture** principles with **MVVM (Model-View-ViewModel)** and **Unidirectional Data Flow (UDF)**.
+This project follows **Clean Architecture** principles with **MVVM (Model-View-ViewModel)** and **Unidirectional Data Flow (UDF)** organized using **Package-by-Feature**.
 
 ```
 ┌────────────────────────────────────────────────────────┐
@@ -58,43 +58,32 @@ This project follows **Clean Architecture** principles with **MVVM (Model-View-V
 ┌────────────────────────────────────────────────────────┐
 │               CuriosityDao & AppDatabase               │
 │                    (Room SQLite)                       │
-└────────────────────────────────────────────────────────┘
+└───────────────────────────┴────────────────────────────┘
 ```
-
-### Tech Stack
-
-- **Language:** Kotlin 2.2+
-- **UI Framework:** Jetpack Compose (Material 3)
-- **Local Storage:** Room Database 2.8.5
-- **Annotation Processing:** KSP (Kotlin Symbol Processing)
-- **Async & Reactive:** Kotlin Coroutines & `StateFlow` / `Flow`
-- **Build System:** Gradle Kotlin DSL with Version Catalog (`gradle/libs.versions.toml`)
 
 ---
 
-## 📂 Directory Structure
+## 📂 Package-by-Feature Directory Structure
 
 ```
 app/src/main/java/com/example/vibepractice/
 ├── MainActivity.kt                      # App entry point & ViewModel instantiation
-├── data/
-│   ├── model/
-│   │   ├── CuriosityItem.kt             # Room Entity table definition
-│   │   └── CuriosityStatus.kt          # Status Enum (PARKED, IN_PROGRESS, LEARNED)
-│   ├── local/
-│   │   ├── CuriosityDao.kt              # Room DAO with reactive Flow queries
-│   │   ├── Converters.kt                # TypeConverters for Enum persistence
-│   │   └── AppDatabase.kt               # Room Database singleton builder
-│   └── repository/
-│       └── CuriosityRepository.kt       # Repository interface & implementation with IO dispatchers
-└── ui/
+├── core/                                # Shared infrastructure & foundation
+│   ├── database/
+│   │   ├── AppDatabase.kt               # Room Database singleton builder
+│   │   └── Converters.kt                # TypeConverters for Enum persistence
+│   └── theme/
+│       ├── Color.kt                     # Material 3 color palette
+│       ├── Theme.kt                     # VIbePracticeTheme setup
+│       └── Type.kt                      # Typography configuration
+└── curiosity/                           # Feature: Curiosity Parking Lot
+    ├── CuriosityItem.kt                 # Room Entity table definition
+    ├── CuriosityStatus.kt              # Status Enum (PARKED, IN_PROGRESS, LEARNED)
+    ├── CuriosityDao.kt                  # Room DAO with reactive Flow queries
+    ├── CuriosityRepository.kt           # Repository interface & implementation
     ├── CuriosityUiState.kt              # Immutable UI state data class
-    ├── CuriosityViewModel.kt            # ViewModel managing UI state and user intents
-    ├── CuriosityScreen.kt               # Compose UI (Quick Capture, Filter Chips, Item Cards)
-    └── theme/
-        ├── Color.kt                     # Material 3 color palette
-        ├── Theme.kt                     # VIbePracticeTheme setup
-        └── Type.kt                      # Material 3 typography
+    ├── CuriosityViewModel.kt            # ViewModel managing state & coroutines
+    └── CuriosityScreen.kt               # Compose UI (Quick Capture, Filters, List Cards)
 ```
 
 ---

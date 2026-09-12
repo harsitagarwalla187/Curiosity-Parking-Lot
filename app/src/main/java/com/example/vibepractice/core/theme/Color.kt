@@ -1,4 +1,4 @@
-package com.example.vibepractice.ui.theme
+package com.example.vibepractice.core.theme
 
 import androidx.compose.ui.graphics.Color
 

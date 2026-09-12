@@ -1,11 +1,8 @@
-package com.example.vibepractice.ui
+package com.example.vibepractice.curiosity
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
-import com.example.vibepractice.data.model.CuriosityItem
-import com.example.vibepractice.data.model.CuriosityStatus
-import com.example.vibepractice.data.repository.CuriosityRepository
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

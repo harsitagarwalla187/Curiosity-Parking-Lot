@@ -1,7 +1,4 @@
-package com.example.vibepractice.ui
-
-import com.example.vibepractice.data.model.CuriosityItem
-import com.example.vibepractice.data.model.CuriosityStatus
+package com.example.vibepractice.curiosity
 
 data class CuriosityUiState(
     val items: List<CuriosityItem> = emptyList(),

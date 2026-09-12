@@ -1,4 +1,4 @@
-package com.example.vibepractice.data.local
+package com.example.vibepractice.curiosity
 
 import androidx.room.Dao
 import androidx.room.Delete
@@ -6,8 +6,6 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
-import com.example.vibepractice.data.model.CuriosityItem
-import com.example.vibepractice.data.model.CuriosityStatus
 import kotlinx.coroutines.flow.Flow
 
 @Dao

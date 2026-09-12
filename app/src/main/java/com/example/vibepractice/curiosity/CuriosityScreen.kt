@@ -1,4 +1,4 @@
-package com.example.vibepractice.ui
+package com.example.vibepractice.curiosity
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.animateContentSize
@@ -50,8 +50,6 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.vibepractice.data.model.CuriosityItem
-import com.example.vibepractice.data.model.CuriosityStatus
 
 @Composable
 fun CuriosityScreen(viewModel: CuriosityViewModel) {
@@ -67,7 +65,6 @@ fun CuriosityScreen(viewModel: CuriosityViewModel) {
                 .padding(innerPadding)
                 .padding(horizontal = 16.dp)
         ) {
-            // Top App Title
             Spacer(modifier = Modifier.height(16.dp))
             Text(
                 text = "Curiosity Parking Lot",
@@ -83,7 +80,6 @@ fun CuriosityScreen(viewModel: CuriosityViewModel) {
 
             Spacer(modifier = Modifier.height(16.dp))
 
-            // Quick Capture Input Box
             QuickCaptureCard(
                 uiState = uiState,
                 onTitleChange = viewModel::onTitleChange,
@@ -95,7 +91,6 @@ fun CuriosityScreen(viewModel: CuriosityViewModel) {
 
             Spacer(modifier = Modifier.height(16.dp))
 
-            // Filter Chips
             FilterChipsRow(
                 selectedFilter = uiState.selectedFilter,
                 onSelectFilter = viewModel::setFilter
@@ -103,7 +98,6 @@ fun CuriosityScreen(viewModel: CuriosityViewModel) {
 
             Spacer(modifier = Modifier.height(12.dp))
 
-            // Item List or Empty State
             if (uiState.items.isEmpty()) {
                 EmptyState()
             } else {
@@ -327,7 +321,6 @@ fun CuriosityItemCard(
 
             Spacer(modifier = Modifier.height(8.dp))
 
-            // Status Actions Row
             Row(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.End,

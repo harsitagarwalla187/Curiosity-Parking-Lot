@@ -1,11 +1,12 @@
-package com.example.vibepractice.data.local
+package com.example.vibepractice.core.database
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
-import com.example.vibepractice.data.model.CuriosityItem
+import com.example.vibepractice.curiosity.CuriosityDao
+import com.example.vibepractice.curiosity.CuriosityItem
 
 @Database(
     entities = [CuriosityItem::class],

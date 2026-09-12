@@ -9,11 +9,11 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import com.example.vibepractice.data.local.AppDatabase
-import com.example.vibepractice.data.repository.CuriosityRepositoryImpl
-import com.example.vibepractice.ui.CuriosityScreen
-import com.example.vibepractice.ui.CuriosityViewModel
-import com.example.vibepractice.ui.theme.VIbePracticeTheme
+import com.example.vibepractice.core.database.AppDatabase
+import com.example.vibepractice.core.theme.VIbePracticeTheme
+import com.example.vibepractice.curiosity.CuriosityRepositoryImpl
+import com.example.vibepractice.curiosity.CuriosityScreen
+import com.example.vibepractice.curiosity.CuriosityViewModel
 
 class MainActivity : ComponentActivity() {
 

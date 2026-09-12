@@ -1,4 +1,4 @@
-package com.example.vibepractice.ui.theme
+package com.example.vibepractice.core.theme
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
@@ -50,7 +50,7 @@ private val DarkColorScheme = darkColorScheme(
 
 @Composable
 fun VIbePracticeTheme(
-    darkTheme: Boolean = false, // Default to light mode for crisp contrast
+    darkTheme: Boolean = false,
     content: @Composable () -> Unit
 ) {
     val colorScheme = if (darkTheme) DarkColorScheme else LightColorScheme

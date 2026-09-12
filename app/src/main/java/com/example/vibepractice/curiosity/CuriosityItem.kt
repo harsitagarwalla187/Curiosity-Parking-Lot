@@ -1,4 +1,4 @@
-package com.example.vibepractice.data.model
+package com.example.vibepractice.curiosity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
